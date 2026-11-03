@@ -111,4 +111,4 @@ When choosing a technology, the first question isn't "what do people say is bett
 
 ---
 
-Truth is, before the task force existed, on March 13, 2025, I'd already made the first commit to a new repository. And from that day on, I split the code into several parts. If I'd been working alone, I wouldn't have. That's the next episode.
+About a week after I joined, I started refactoring the existing frontend source and redesigning its structure from the ground up. If I'd been working alone, I never would have. That's the next episode.
