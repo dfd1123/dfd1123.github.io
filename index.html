@@ -7,9 +7,9 @@
     <meta
       name="description"
       id="meta-description"
-      content="김종완 책임연구원. 누구나 레인보우로보틱스의 로봇을 프로그램하고, 자신에게 맞게 구성할 수 있는 소프트웨어 플랫폼을 만듭니다."
+      content="레인보우로보틱스에서 로봇 미들웨어와 개발 도구를 만드는 김종완의 개인 블로그. 만들면서 틀렸던 판단과 풀어낸 문제를 순서대로 기록합니다."
     />
-    <title>김종완 Derek Kim — Robotics Middleware</title>
+    <title>김종완 Derek Kim — 로봇 소프트웨어 작업 일지</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -17,8 +17,8 @@
       <a class="wordmark" href="#top" aria-label="김종완 홈" data-i18n-aria="homeLabel">D<span>.</span>K</a>
       <nav aria-label="주요 메뉴">
         <a href="#story" data-i18n="navStory">나의 이야기</a>
-        <a href="#perspective" data-i18n="navPerspective">만드는 관점</a>
-        <a href="#writing" data-i18n="navWriting">기술 기록</a>
+        <a href="#perspective" data-i18n="navPerspective">생각</a>
+        <a href="#writing" data-i18n="navWriting">연재</a>
         <button id="language-toggle" class="language-toggle" type="button" aria-label="Switch language">EN</button>
       </nav>
     </header>
@@ -27,31 +27,27 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-grid" aria-hidden="true"></div>
         <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot"></span> 김종완 <i>·</i> Derek Kim <i>·</i> <span data-i18n="role">책임연구원</span> <i>·</i> <span data-company>레인보우로보틱스</span></p>
-          <h1 id="hero-title" data-i18n-html="heroTitle">각자에게 맞는 로봇을<br /><em>누구나 직접 프로그램하도록.</em></h1>
-          <p class="hero-lead" data-i18n-html="heroLead">
-            레인보우로보틱스의 로봇을 누구나 직접 프로그램하고, 각자의 일과 취향에 맞게 기능과 동작을 구성할 수 있는
-            <strong>소프트웨어 플랫폼</strong>을 만듭니다.
-          </p>
-          <a class="hero-link" href="#story"><span data-i18n="heroLink">제가 만드는 시스템</span><span aria-hidden="true">↓</span></a>
+          <p class="eyebrow"><span class="status-dot"></span> 김종완 <i>·</i> Derek Kim <i>·</i> <span data-i18n="eyebrowTag">개인 작업 일지</span></p>
+          <h1 id="hero-title" data-i18n-html="heroTitle">로봇 앱 화면 하나에서 시작해서,<br /><em>지금은 로봇들을 잇고 있습니다.</em></h1>
+          <p class="hero-lead" data-i18n-html="heroLead">레인보우로보틱스에서 로봇 미들웨어와 개발 도구를 만드는 김종완입니다. 여기엔 그 길에서 <strong>틀렸던 판단, 오래 붙잡고 있던 고민, 결국 풀어낸 문제</strong>를 순서대로 적습니다.</p>
+          <a class="hero-link" href="#writing"><span data-i18n="heroLink">1화부터 읽기</span><span aria-hidden="true">↓</span></a>
         </div>
 
-        <div class="orbit-art" aria-hidden="true">
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
-          <div class="orbit orbit-three"></div>
-          <div class="orbit-core"><span>ONE<br />PLATFORM</span></div>
-          <span class="orbit-node node-a">ROBOT 01</span>
-          <span class="orbit-node node-b">ROBOT 02</span>
-          <span class="orbit-node node-c">AI</span>
-          <span class="orbit-node node-d">PEOPLE</span>
-          <span class="orbit-cross cross-a">+</span>
-          <span class="orbit-cross cross-b">+</span>
+        <div class="log-art" aria-label="작업 일지 요약" data-i18n-aria="logLabel">
+          <div class="log-bar" aria-hidden="true"><i></i><i></i><i></i><span>work-log</span></div>
+          <ol class="log-body">
+            <li class="log-cmd" aria-hidden="true">$ git log --reverse --author=me</li>
+            <li><time>2025.03</time><span data-i18n="logOne">첫 커밋. 로봇 한 대를 위한 웹 앱</span></li>
+            <li><time>2025.08</time><span data-i18n="logTwo">한 대로는 부족했다. 여러 로봇을 위한 앱</span></li>
+            <li><time>2026.02</time><span data-i18n="logThree">서로 다른 로봇을 한 그릇에 담기</span></li>
+            <li><time>2026.06</time><span data-i18n="logFour">동료 연구원이 직접 기능을 붙일 수 있게</span></li>
+            <li class="log-now"><time>NOW</time><span><span data-i18n="logNow">그리고 지금, 이걸 쓰는 중</span><b class="cursor" aria-hidden="true"></b></span></li>
+          </ol>
         </div>
 
         <div class="hero-bottom">
-          <span>ROBOTICS MIDDLEWARE</span>
-          <span>FROM A UNIFIED EXPERIENCE TO AN OPEN ECOSYSTEM</span>
+          <span data-i18n="bottomLeft">PERSONAL BLOG</span>
+          <span data-i18n="bottomMid">개인의 기록이며 회사의 공식 입장과 무관합니다</span>
           <span data-i18n="scrollExplore">SCROLL TO EXPLORE ↓</span>
         </div>
       </section>
