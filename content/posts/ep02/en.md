@@ -1,6 +1,6 @@
 ---
 title: If I'd been working alone, I would've just thrown it together
-summary: Why I split out shared packages on the day of the first commit — and where that decision came back much later.
+summary: Why I split out shared packages on the day of the first commit — and how that decision came back much later.
 ---
 This part comes much later. I built a CLI to make the integrated software I'd built easy to use, and alongside it an MCP server that runs over standard input/output. Then I made a VS Code extension to make it easier still.
 
