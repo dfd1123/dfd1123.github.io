@@ -159,7 +159,7 @@ write('posts/index.html', page({
       <div class="post-hero"><div class="section-wrap">
         <p class="post-meta">THE SERIES</p>
         <h1>${bi('로봇 웹 앱 하나에서 플랫폼까지.', 'From one robot web app to a platform.')}</h1>
-        <p class="post-summary">${bi('실제로 일어난 순서대로, 3일에 2편씩 연재합니다.', 'Told in the order it happened. Two episodes every three days.')}</p>
+        <p class="post-summary">${bi('실제로 일어난 순서대로, 매주 주말 4편씩 연재합니다.', 'Told in the order it happened. Four new episodes every weekend.')}</p>
       </div></div>
       <div class="section-wrap archive">${chapters || `<p class="archive-empty">${bi('1화를 쓰고 있습니다.', 'Episode 1 is being written.')}</p>`}
       </div>

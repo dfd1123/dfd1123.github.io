@@ -6,6 +6,13 @@
     <description>로봇 웹 앱 하나에서 플랫폼까지, 실제로 일어난 순서대로 쓰는 연재.</description>
     <language>ko</language>
     <item>
+      <title>EP.02 혼자였다면 그냥 막 짰을 거다</title>
+      <link>https://dfd1123.github.io/posts/ep02/</link>
+      <guid>https://dfd1123.github.io/posts/ep02/</guid>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+      <description>첫 커밋 날부터 공통 패키지를 나눠 둔 이유. 그리고 그 결정이 한참 뒤에 어디서 돌아왔는지.</description>
+    </item>
+    <item>
       <title>EP.01 로봇마다 고객마다 매번 새로운 UI를 만들 순 없다</title>
       <link>https://dfd1123.github.io/posts/ep01/</link>
       <guid>https://dfd1123.github.io/posts/ep01/</guid>
