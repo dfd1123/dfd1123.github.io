@@ -8,7 +8,7 @@ And later on, it paid off in a way I hadn't expected. This part comes much later
 
 What helped enormously there was the package structure I'd split out from the start. To explain it, we have to go back to about a week after I joined.
 
-## Walls on day one
+## Week one: rebuilding the foundation
 
 A week into the job, I started refactoring the existing frontend source and redesigning its structure from scratch. The first commit to the new repository was on March 13, 2025. From that very first day, it had walls in it: shared packages for components, hooks, styles, and utilities, plus a Storybook to view and tweak those components on their own.
 
