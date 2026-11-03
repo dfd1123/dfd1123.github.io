@@ -1,0 +1,12 @@
+{
+  "name": "dfd1123.github.io",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/build.mjs --preview"
+  },
+  "devDependencies": {
+    "marked": "^18.1.3"
+  }
+}

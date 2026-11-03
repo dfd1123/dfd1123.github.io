@@ -121,8 +121,9 @@ function readSavedLanguage() {
 function setLanguage(language) {
   const selectedCopy = copy[language] ?? copy.ko;
   document.documentElement.lang = language;
-  document.title = selectedCopy.title;
-  metaDescription.content = selectedCopy.description;
+  const pageKey = language === 'ko' ? 'Ko' : 'En';
+  document.title = document.body.dataset[`title${pageKey}`] || selectedCopy.title;
+  if (metaDescription) metaDescription.content = document.body.dataset[`desc${pageKey}`] || selectedCopy.description;
   document.querySelector('nav[aria-label]')?.setAttribute('aria-label', selectedCopy.navLabel);
   languageButton.textContent = language === 'ko' ? 'EN' : 'KO';
   languageButton.setAttribute('aria-label', selectedCopy.languageLabel);
