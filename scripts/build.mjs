@@ -215,27 +215,37 @@ const projectItems = ai.projects.map((p) => `
               <dt>${bi('결과', 'Result')}</dt><dd>${bi(esc(p.result_ko), esc(p.result_en || p.result_ko))}</dd>
             </dl>
           </article>`).join('');
-write('ai/index.html', page({
-  pre: '../', canonical: 'ai/',
-  titleKo: 'AI — 김종완', titleEn: 'AI — Derek Kim',
-  descKo: 'AI에 대한 생각이 시간에 따라 어떻게 바뀌었는지, 그리고 AI를 써서 만든 것들.', descEn: 'How my thinking about AI has changed over time, and what I have built with it.',
-  body: `
-    <main>
+const aiTabs = (active, pre) => `
+        <nav class="ai-tabs" aria-label="AI">
+          <a href="${pre}ai/index.html"${active === 'thoughts' ? ' aria-current="page"' : ''}>${bi('생각의 변화', 'How my thinking changed')} <b class="count">${ai.thoughts.length}</b></a>
+          <a href="${pre}ai/projects/index.html"${active === 'projects' ? ' aria-current="page"' : ''}>${bi('AI로 만든 것', 'Built with AI')} <b class="count">${ai.projects.length}</b></a>
+        </nav>`;
+const aiHero = `
       <div class="post-hero"><div class="section-wrap">
         <p class="post-meta">AI</p>
         <h1>${bi('AI와 일하는 방식이 바뀌고 있다.', 'The way I work with AI keeps changing.')}</h1>
         <p class="post-summary">${bi('그때그때의 생각을 날짜와 함께 남기고, AI를 써서 만든 것들을 모아 둡니다.', 'Thoughts kept with their dates, and the things I have built with AI.')}</p>
-      </div></div>
-      <div class="section-wrap ai-page">
-        <section>
-          <div class="section-kicker"><span>01</span> <span>${bi('생각의 변화', 'HOW MY THINKING CHANGED')}</span></div>
-          <ol class="ai-timeline">${thoughtItems}
-          </ol>
-        </section>
-        <section>
-          <div class="section-kicker"><span>02</span> <span>${bi('AI로 만든 것', 'BUILT WITH AI')}</span></div>
-          ${projectItems ? `<div class="ai-projects">${projectItems}</div>` : `<p class="archive-empty">${bi('정리하고 있습니다.', 'Coming soon.')}</p>`}
-        </section>
+      </div></div>`;
+write('ai/index.html', page({
+  pre: '../', canonical: 'ai/',
+  titleKo: 'AI · 생각의 변화 — 김종완', titleEn: 'AI · How my thinking changed — Derek Kim',
+  descKo: 'AI에 대한 생각이 시간에 따라 어떻게 바뀌었는지.', descEn: 'How my thinking about AI has changed over time.',
+  body: `
+    <main>${aiHero}
+      <div class="section-wrap ai-page">${aiTabs('thoughts', '../')}
+        <ol class="ai-timeline">${[...thoughtItems.split('</li>').filter((x) => x.trim())].reverse().map((x) => x + '</li>').join('')}
+        </ol>
+      </div>
+    </main>`,
+}));
+write('ai/projects/index.html', page({
+  pre: '../../', canonical: 'ai/projects/',
+  titleKo: 'AI · AI로 만든 것 — 김종완', titleEn: 'AI · Built with AI — Derek Kim',
+  descKo: 'AI를 써서 만든 프로그램들. 문제, AI를 어떻게 썼나, 결과.', descEn: 'Programs I have built with AI: the problem, how AI helped, and the result.',
+  body: `
+    <main>${aiHero}
+      <div class="section-wrap ai-page">${aiTabs('projects', '../../')}
+        ${projectItems ? `<div class="ai-projects">${projectItems}</div>` : `<p class="archive-empty">${bi('정리하고 있습니다.', 'Coming soon.')}</p>`}
       </div>
     </main>`,
 }));

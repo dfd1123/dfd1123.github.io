@@ -237,3 +237,9 @@ a.writing-item { color: inherit; }
 .ai-project dt { margin-top: 10px; color: var(--muted); font: 500 .62rem var(--mono); text-transform: uppercase; letter-spacing: .06em; }
 .ai-project dd { margin: 4px 0 0; font-size: .92rem; line-height: 1.7; word-break: keep-all; }
 @media (max-width: 620px) { .ai-thought { grid-template-columns: 1fr; gap: 6px; } }
+
+.ai-tabs { display: flex; gap: 8px; margin-bottom: 40px; border-bottom: 1px solid var(--line); }
+.ai-tabs a { padding: 12px 18px; margin-bottom: -1px; border-bottom: 2px solid transparent; color: var(--muted); font-size: .92rem; }
+.ai-tabs a[aria-current="page"] { color: var(--ink); font-weight: 600; border-bottom-color: var(--ink); }
+.ai-tabs a .count { font-weight: 500; margin-left: 4px; padding: 1px 7px; border-radius: 999px; background: rgba(20,32,30,.07); font: 500 .68rem var(--mono); }
+.ai-page .ai-timeline { margin-top: 0; }
