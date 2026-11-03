@@ -257,3 +257,12 @@ a.writing-item { color: inherit; }
 .contact-links a { display: inline-flex; gap: 10px; align-items: center; padding: 12px 20px; border: 1px solid #3b4b45; border-radius: 999px; color: var(--paper-bright); font-size: .9rem; transition: border-color .2s, color .2s; }
 .contact-links a:hover { border-color: var(--lime); color: var(--lime); }
 @media (max-width: 620px) { .ai-teaser { padding-bottom: 90px; } .ai-teaser-head { display: block; } .ai-teaser-all { display: inline-block; margin-top: 14px; } .ai-teaser-quote { padding: 22px 20px; } }
+
+/* closing: terminal-style sign-off */
+.closing-inner { padding-top: 92px; padding-bottom: 88px; }
+.closing h2 { margin-bottom: 40px; }
+.closing-cursor { width: .42em; height: .9em; margin-left: 10px; vertical-align: -.06em; }
+.contact-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 26px; padding-top: 26px; border-top: 1px solid #2c3a36; font: 400 .9rem var(--mono); }
+.contact-prompt { color: #6f7c73; }
+.contact-row a { color: var(--lime); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(216,243,106,.4); }
+.contact-row a:hover { text-decoration-color: var(--lime); }
