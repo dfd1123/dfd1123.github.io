@@ -7,7 +7,7 @@ const copy = {
     navPerspective: '만드는 관점',
     navWriting: '기술 기록',
     role: '책임연구원',
-    heroTitle: '모두가 자기만의<br /><em>로봇을 만들 수 있도록.</em>',
+    heroTitle: '로봇은 내 방식으로.<br /><em>누구나 직접 만들도록.</em>',
     heroLead: '레인보우로보틱스의 로봇을 누구나 프로그램하고, 자신에게 맞게 구성할 수 있는 <strong>소프트웨어 플랫폼</strong>을 만듭니다.',
     heroLink: '제가 만드는 미래',
     scrollExplore: 'SCROLL TO EXPLORE ↓',
@@ -24,7 +24,7 @@ const copy = {
     stepThreeTitle: '각자에게 맞는 로봇',
     stepThreeBody: '누구나 프로그램을 만들고, 자신에게 맞게 기능과 동작을 구성하도록.',
     bigPicture: 'THE BIG PICTURE',
-    manifestoQuote: '“로봇을 완성해 건네는 데서 한 걸음 더,<br />누구나 <em>자기에게 맞는 로봇을 만들도록.</em>”',
+    manifestoQuote: '누구나 로봇을 프로그램하고,<br /><em>자기에게 맞게 구성합니다.</em>',
     manifestoNote: '로봇을 쓰는 사람에서, 자기 방식으로 만드는 사람으로.',
     fieldNotes: 'NOTES FROM THE FIELD',
     writingTitle: '만들며 배운 것들.',
@@ -37,7 +37,7 @@ const copy = {
     articleThree: 'AI 시대, 로봇 플랫폼은 무엇을 열어야 할까',
     publishing: '첫 번째 기록을 준비하고 있습니다',
     closingEyebrow: 'ONE EXPERIENCE. MANY POSSIBILITIES.',
-    closingTitle: '모두가 자기만의 로봇을<br /><em>만들 수 있도록.</em>',
+    closingTitle: '로봇은 내 방식으로.<br /><em>누구나 직접 만들도록.</em>',
     backTop: '처음으로',
     navLabel: '주요 메뉴',
     languageLabel: 'Switch language',
@@ -51,7 +51,7 @@ const copy = {
     navPerspective: 'My approach',
     navWriting: 'Writing',
     role: 'Principal Research Engineer',
-    heroTitle: 'Robots shaped by<br /><em>the people who use them.</em>',
+    heroTitle: 'Robots, your way.<br /><em>Made by everyone.</em>',
     heroLead: 'I build the <strong>software platform</strong> that lets anyone program Rainbow Robotics robots and configure them to fit their needs.',
     heroLink: 'The future I am building',
     scrollExplore: 'SCROLL TO EXPLORE ↓',
@@ -68,7 +68,7 @@ const copy = {
     stepThreeTitle: 'A robot that fits you',
     stepThreeBody: 'Make it possible for anyone to program a robot and shape its capabilities around their needs.',
     bigPicture: 'THE BIG PICTURE',
-    manifestoQuote: '“Go beyond delivering finished robots.<br />Let everyone <em>shape a robot of their own.</em>”',
+    manifestoQuote: 'Anyone can program a robot<br /><em>and shape it to fit their needs.</em>',
     manifestoNote: 'From using a robot to making it work your way.',
     fieldNotes: 'NOTES FROM THE FIELD',
     writingTitle: 'Lessons from building.',
@@ -81,7 +81,7 @@ const copy = {
     articleThree: 'What should a robot platform unlock in the age of AI?',
     publishing: 'The first essay is in the works',
     closingEyebrow: 'ONE EXPERIENCE. MANY POSSIBILITIES.',
-    closingTitle: 'Robots shaped around you,<br /><em>made possible for everyone.</em>',
+    closingTitle: 'Robots, your way.<br /><em>Made by everyone.</em>',
     backTop: 'Back to top',
     navLabel: 'Main navigation',
     languageLabel: '언어 전환',
@@ -91,6 +91,14 @@ const copy = {
 
 const languageButton = document.querySelector('#language-toggle');
 const metaDescription = document.querySelector('#meta-description');
+
+function readSavedLanguage() {
+  try {
+    return localStorage.getItem('site-language');
+  } catch {
+    return null;
+  }
+}
 
 function setLanguage(language) {
   const selectedCopy = copy[language] ?? copy.ko;
@@ -117,11 +125,15 @@ function setLanguage(language) {
     company.textContent = selectedCopy.company;
   });
 
-  localStorage.setItem('site-language', language);
+  try {
+    localStorage.setItem('site-language', language);
+  } catch {
+    // Language switching still works for local files; only persistence is unavailable.
+  }
 }
 
 languageButton.addEventListener('click', () => {
   setLanguage(document.documentElement.lang === 'ko' ? 'en' : 'ko');
 });
 
-setLanguage(localStorage.getItem('site-language') || 'ko');
+setLanguage(readSavedLanguage() || 'ko');
