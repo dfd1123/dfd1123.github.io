@@ -218,3 +218,6 @@ a.writing-item { color: inherit; }
   .post-nav a:last-child { text-align: left; }
 }
 
+.post-body figure.diagram { margin: 2.2em 0; }
+.post-body figure.diagram svg { display: block; width: 100%; height: auto; }
+.post-body figure.diagram figcaption { margin-top: 10px; color: var(--muted); font-size: .82rem; text-align: center; }

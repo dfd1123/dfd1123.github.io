@@ -5,5 +5,12 @@
     <link>https://dfd1123.github.io/</link>
     <description>로봇 웹 앱 하나에서 플랫폼까지, 실제로 일어난 순서대로 쓰는 연재.</description>
     <language>ko</language>
+    <item>
+      <title>EP.01 로봇마다 고객마다 매번 새로운 UI를 만들 순 없다</title>
+      <link>https://dfd1123.github.io/posts/ep01/</link>
+      <guid>https://dfd1123.github.io/posts/ep01/</guid>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+      <description>업체마다 화면을 새로 만들어 주던 시절, 사비 30만 원 들인 장표로 통합을 제안했던 이야기. 그리고 내가 로봇 소프트웨어를 웹으로 가자고 했던 이유.</description>
+    </item>
   </channel>
 </rss>
