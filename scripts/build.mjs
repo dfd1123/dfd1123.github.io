@@ -59,6 +59,7 @@ const header = (pre) => `
       <nav aria-label="주요 메뉴">
         <a href="${pre}index.html" data-i18n="navStory">나의 이야기</a>
         <a href="${pre}posts/index.html" data-i18n="navWriting">로봇 미들웨어 SW</a>
+        <a href="${pre}ai/index.html" data-i18n="navAI">AI</a>
         <button id="language-toggle" class="language-toggle" type="button" aria-label="Switch language">EN</button>
       </nav>
     </header>`;
@@ -193,6 +194,51 @@ const START = '<!-- SERIES:START -->', END = '<!-- SERIES:END -->';
 if (!home.includes(START)) throw new Error('index.html is missing SERIES markers');
 home = home.replace(new RegExp(`${START}[\\s\\S]*?${END}`), `${START}${block}\n        ${END}`);
 write(homePath, home);
+
+// ---- AI page
+const ai = existsSync(join(root, 'content/ai.json')) ? JSON.parse(read('content/ai.json')) : { thoughts: [], projects: [] };
+const thoughtItems = ai.thoughts.map((t) => `
+          <li class="ai-thought">
+            <time>${esc(t.date)}</time>
+            <div>
+              <p>${bi(esc(t.ko), esc(t.en))}</p>
+              ${t.link ? `<a class="ai-link" href="../${t.link}">${bi('관련 글 읽기 →', 'Related episode →')}</a>` : ''}
+            </div>
+          </li>`).join('');
+const projectItems = ai.projects.map((p) => `
+          <article class="ai-project">
+            <span class="writing-topic">${esc(p.period || '')}</span>
+            <h3>${bi(esc(p.title_ko), esc(p.title_en || p.title_ko))}</h3>
+            <dl>
+              <dt>${bi('문제', 'Problem')}</dt><dd>${bi(esc(p.problem_ko), esc(p.problem_en || p.problem_ko))}</dd>
+              <dt>${bi('AI를 어떻게 썼나', 'How AI helped')}</dt><dd>${bi(esc(p.how_ko), esc(p.how_en || p.how_ko))}</dd>
+              <dt>${bi('결과', 'Result')}</dt><dd>${bi(esc(p.result_ko), esc(p.result_en || p.result_ko))}</dd>
+            </dl>
+          </article>`).join('');
+write('ai/index.html', page({
+  pre: '../', canonical: 'ai/',
+  titleKo: 'AI — 김종완', titleEn: 'AI — Derek Kim',
+  descKo: 'AI에 대한 생각이 시간에 따라 어떻게 바뀌었는지, 그리고 AI를 써서 만든 것들.', descEn: 'How my thinking about AI has changed over time, and what I have built with it.',
+  body: `
+    <main>
+      <div class="post-hero"><div class="section-wrap">
+        <p class="post-meta">AI</p>
+        <h1>${bi('AI와 일하는 방식이 바뀌고 있다.', 'The way I work with AI keeps changing.')}</h1>
+        <p class="post-summary">${bi('그때그때의 생각을 날짜와 함께 남기고, AI를 써서 만든 것들을 모아 둡니다.', 'Thoughts kept with their dates, and the things I have built with AI.')}</p>
+      </div></div>
+      <div class="section-wrap ai-page">
+        <section>
+          <div class="section-kicker"><span>01</span> <span>${bi('생각의 변화', 'HOW MY THINKING CHANGED')}</span></div>
+          <ol class="ai-timeline">${thoughtItems}
+          </ol>
+        </section>
+        <section>
+          <div class="section-kicker"><span>02</span> <span>${bi('AI로 만든 것', 'BUILT WITH AI')}</span></div>
+          ${projectItems ? `<div class="ai-projects">${projectItems}</div>` : `<p class="archive-empty">${bi('정리하고 있습니다.', 'Coming soon.')}</p>`}
+        </section>
+      </div>
+    </main>`,
+}));
 
 // ---- RSS
 const items = [...published].reverse().map((p) => `
