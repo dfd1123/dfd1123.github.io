@@ -3,70 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101b1a" />
     <meta
       name="description"
-      content="여러 로봇 제품을 하나의 사용자 경험과 확장 가능한 소프트웨어 플랫폼으로 연결하는 미들웨어 시스템에 대한 기록."
+      content="김종완 책임연구원. 여러 로봇 제품을 하나의 사용자 경험과 확장 가능한 소프트웨어 플랫폼으로 연결하는 미들웨어 시스템을 만듭니다."
     />
-    <title>Derek Kim — Robotics Middleware</title>
+    <title>김종완 Derek Kim — Robotics Middleware</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="김종완 홈">D<span>.</span>K</a>
       <nav aria-label="주요 메뉴">
-        <a class="brand" href="/">Derek Kim</a>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#writing">Writing</a>
-        </div>
+        <a href="#story">나의 이야기</a>
+        <a href="#perspective">만드는 관점</a>
+        <a href="#writing">기술 기록</a>
       </nav>
+    </header>
 
-      <section class="hero" aria-labelledby="page-title">
-        <p class="eyebrow">김종완 · 책임연구원 · ROBOTICS MIDDLEWARE</p>
-        <h1 id="page-title">여러 로봇을<br />하나의 플랫폼으로.</h1>
-        <p class="lead">
-          여러 로봇 제품을 하나의 사용자 경험과 확장 가능한 소프트웨어 플랫폼으로 연결하는
-          미들웨어 시스템을 만듭니다.
-        </p>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> 김종완 <i>·</i> Derek Kim <i>·</i> 책임연구원</p>
+          <h1 id="hero-title">로봇이 달라도,<br /><em>경험은 하나로.</em></h1>
+          <p class="hero-lead">
+            여러 로봇 제품을 하나의 사용자 경험과 확장 가능한 소프트웨어 플랫폼으로 연결하는
+            <strong>미들웨어 시스템</strong>을 만듭니다.
+          </p>
+          <a class="hero-link" href="#story">제가 만드는 시스템 <span aria-hidden="true">↓</span></a>
+        </div>
+
+        <div class="orbit-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit orbit-three"></div>
+          <div class="orbit-core"><span>ONE<br />PLATFORM</span></div>
+          <span class="orbit-node node-a">ROBOT 01</span>
+          <span class="orbit-node node-b">ROBOT 02</span>
+          <span class="orbit-node node-c">AI</span>
+          <span class="orbit-node node-d">PEOPLE</span>
+          <span class="orbit-cross cross-a">+</span>
+          <span class="orbit-cross cross-b">+</span>
+        </div>
+
+        <div class="hero-bottom">
+          <span>ROBOTICS MIDDLEWARE</span>
+          <span>FROM A UNIFIED EXPERIENCE TO AN OPEN ECOSYSTEM</span>
+          <span>SCROLL TO EXPLORE ↓</span>
+        </div>
       </section>
 
-      <section id="about" class="section split">
-        <p class="section-label">01 / ABOUT</p>
-        <div>
-          <h2>제품의 경계에서<br />플랫폼의 기반까지.</h2>
+      <section id="story" class="story section-wrap">
+        <div class="section-kicker"><span>01</span> WHY I BUILD</div>
+        <div class="story-intro">
+          <h2>사용자 경험을 잇는 일에서<br /><span>플랫폼을 만드는 일로.</span></h2>
           <p>
-            로봇마다 달랐던 사용 경험을 연결하는 일에서 출발해, 공통 실행 환경, SDK,
-            통신, 운영과 확장 구조를 설계합니다. 이곳에는 내부 구현이 아닌, 물리 세계의
-            불확실한 시스템을 다루며 얻은 판단과 원칙을 기록합니다.
+            로봇마다 다른 UI와 사용 방식을 하나로 잇고 싶었습니다. 그 문제를 풀기 위해
+            공통 소프트웨어 기반을 만들기 시작했고, 지금은 더 많은 기능과 개발자, AI가
+            함께할 수 있는 생태계로 확장하고 있습니다.
           </p>
         </div>
+        <div class="journey" aria-label="프로젝트의 진화">
+          <article class="journey-step">
+            <span class="step-no">01 / THE START</span>
+            <div class="step-mark mark-user" aria-hidden="true"><span></span><span></span><span></span></div>
+            <h3>경험을 하나로</h3>
+            <p>서로 다른 로봇을 사용하는 사람에게 일관된 경험을 제공하는 것.</p>
+          </article>
+          <article class="journey-step">
+            <span class="step-no">02 / THE FOUNDATION</span>
+            <div class="step-mark mark-platform" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <h3>기반을 공통으로</h3>
+            <p>로봇과 기능이 달라도 함께 작동할 수 있는 소프트웨어 기반을 만드는 것.</p>
+          </article>
+          <article class="journey-step">
+            <span class="step-no">03 / WHAT'S NEXT</span>
+            <div class="step-mark mark-ecosystem" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+            <h3>생태계를 열기</h3>
+            <p>새로운 기능과 개발자, AI가 로봇의 능력을 확장하도록 돕는 것.</p>
+          </article>
+        </div>
       </section>
 
-      <section id="writing" class="section">
-        <p class="section-label">02 / WRITING</p>
-        <h2>기록을 준비하고 있습니다.</h2>
-        <div class="topics" role="list">
-          <article role="listitem">
-            <span>01</span>
-            <h3>One experience</h3>
-            <p>서로 다른 로봇 제품을 일관된 경험으로 연결하는 일</p>
+      <section id="perspective" class="manifesto">
+        <div class="section-wrap manifesto-inner">
+          <p class="section-kicker"><span>02</span> THE BIG PICTURE</p>
+          <blockquote>“로봇 한 대를 움직이는 것을 넘어,<br />로봇이 <em>함께 진화하는 기반</em>을 만듭니다.”</blockquote>
+          <p class="manifesto-note">제품의 복잡함은 시스템 안으로. 가능성은 생태계 밖으로.</p>
+          <div class="manifesto-stamp" aria-hidden="true">BUILD<br />THE<br />BRIDGE<span>↗</span></div>
+        </div>
+      </section>
+
+      <section id="writing" class="writing section-wrap">
+        <div class="section-kicker"><span>03</span> NOTES FROM THE FIELD</div>
+        <div class="writing-head">
+          <h2>만들며 배운 것들.</h2>
+          <p>결과보다 판단을, 구현보다 원칙을 기록합니다.</p>
+        </div>
+        <div class="writing-list">
+          <article class="writing-item">
+            <span class="writing-index">01</span>
+            <div><span class="writing-topic">ORIGIN / PRODUCT THINKING</span><h3>왜 로봇마다 사용자 경험이 달라야 할까</h3></div>
+            <span class="writing-arrow" aria-hidden="true">↗</span>
           </article>
-          <article role="listitem">
-            <span>02</span>
-            <h3>Runtime &amp; reliability</h3>
-            <p>명령, 상태, 실행과 복구를 다루는 시스템 설계</p>
+          <article class="writing-item">
+            <span class="writing-index">02</span>
+            <div><span class="writing-topic">PLATFORM / SYSTEM DESIGN</span><h3>통합 UI를 만들다 미들웨어를 설계하게 된 이유</h3></div>
+            <span class="writing-arrow" aria-hidden="true">↗</span>
           </article>
-          <article role="listitem">
-            <span>03</span>
-            <h3>Extensible platform</h3>
-            <p>새 기능, 개발자, 그리고 AI가 들어올 수 있는 경계</p>
+          <article class="writing-item">
+            <span class="writing-index">03</span>
+            <div><span class="writing-topic">FUTURE / AI &amp; ECOSYSTEM</span><h3>AI 시대, 로봇 플랫폼은 무엇을 열어야 할까</h3></div>
+            <span class="writing-arrow" aria-hidden="true">↗</span>
           </article>
+        </div>
+        <p class="publishing-note"><span class="status-dot"></span> 첫 번째 기록을 준비하고 있습니다</p>
+      </section>
+
+      <section class="closing">
+        <div class="section-wrap closing-inner">
+          <p class="eyebrow">ONE EXPERIENCE. MANY POSSIBILITIES.</p>
+          <h2>다음 로봇의 가능성까지<br /><em>연결합니다.</em></h2>
+          <a href="#top" class="back-top">처음으로 <span aria-hidden="true">↑</span></a>
         </div>
       </section>
     </main>
 
-    <footer>
-      <span>© Kim Jongwan · Derek Kim</span>
-      <span>Built with GitHub Pages</span>
+    <footer class="site-footer">
+      <a class="footer-name" href="#top">김종완 <span>Derek Kim</span></a>
+      <span>책임연구원 · Robotics Middleware</span>
+      <span>© 2026</span>
     </footer>
   </body>
 </html>
