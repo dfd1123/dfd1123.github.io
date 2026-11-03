@@ -2,11 +2,11 @@
 title: If I'd been working alone, I would've just thrown it together
 summary: Why I split out shared packages on the day of the first commit — and how that decision came back much later.
 ---
-This part comes much later. I built a CLI to make the integrated software I'd built easy to use, and alongside it an MCP server that runs over standard input/output. Then I made a VS Code extension to make it easier still.
+What I wanted was simple: a design that teammates, including the ones who'd join later, could collaborate in through an agreed architecture and source conventions, and that could keep being maintained for the long run.
 
-What I wanted was simple: make our design system and shared components buildable on their own so they could be used through MCP, and build MCP tools that point to those build outputs, so anyone could pull them in easily.
+And later on, it paid off in a way I hadn't expected. This part comes much later. I built a CLI to make the integrated software I'd built easy to use, and alongside it an MCP server that runs over standard input/output. Then I made a VS Code extension to make it easier still. I made our design system and shared components buildable on their own so they could be used through MCP, and built MCP tools that point to those build outputs, so anyone could pull them in easily.
 
-Something helped enormously along the way: the package structure I'd split out from the start. To explain it, we have to go back to about a week after I joined.
+What helped enormously there was the package structure I'd split out from the start. To explain it, we have to go back to about a week after I joined.
 
 ## Walls on day one
 
