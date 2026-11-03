@@ -55,7 +55,7 @@ posts.sort((a, b) => a.ep - b.ep);
 
 const header = (pre) => `
     <header class="site-header">
-      <a class="wordmark" href="${pre}index.html" aria-label="김종완 홈" data-i18n-aria="homeLabel"><img src="${pre}assets/avatar.png" alt="" width="40" height="40" /></a>
+      <a class="wordmark" href="${pre}index.html" aria-label="김종완 홈" data-i18n-aria="homeLabel"><img src="${pre}assets/avatar.png" alt="" width="48" height="48" /><span class="wordmark-name">김종완 <small>Derek Kim</small></span></a>
       <nav aria-label="주요 메뉴">
         <a href="${pre}index.html" data-i18n="navStory">나의 이야기</a>
         <a href="${pre}posts/index.html" data-i18n="navWriting">로봇 미들웨어 SW</a>
