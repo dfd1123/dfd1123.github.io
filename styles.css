@@ -266,3 +266,8 @@ a.writing-item { color: inherit; }
 .contact-prompt { color: #6f7c73; }
 .contact-row a { color: var(--lime); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(216,243,106,.4); }
 .contact-row a:hover { text-decoration-color: var(--lime); }
+
+.wordmark { display: inline-flex; align-items: center; }
+.wordmark img { display: block; width: 40px; height: 40px; border-radius: 50%; transition: transform .2s; }
+.wordmark:hover img { transform: rotate(-6deg) scale(1.05); }
+@media (max-width: 620px) { .wordmark img { width: 34px; height: 34px; } }

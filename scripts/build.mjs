@@ -55,7 +55,7 @@ posts.sort((a, b) => a.ep - b.ep);
 
 const header = (pre) => `
     <header class="site-header">
-      <a class="wordmark" href="${pre}index.html" aria-label="김종완 홈" data-i18n-aria="homeLabel">D<span>.</span>K</a>
+      <a class="wordmark" href="${pre}index.html" aria-label="김종완 홈" data-i18n-aria="homeLabel"><img src="${pre}assets/avatar.png" alt="" width="40" height="40" /></a>
       <nav aria-label="주요 메뉴">
         <a href="${pre}index.html" data-i18n="navStory">나의 이야기</a>
         <a href="${pre}posts/index.html" data-i18n="navWriting">로봇 미들웨어 SW</a>
@@ -82,6 +82,8 @@ const page = ({ pre, titleKo, titleEn, descKo, descEn, body, canonical }) => `<!
     <link rel="canonical" href="${SITE}/${canonical}" />
     <link rel="alternate" type="application/rss+xml" title="김종완 Derek Kim" href="${pre}feed.xml" />
     <title>${esc(titleKo)}</title>
+    <link rel="icon" type="image/png" href="${pre}assets/favicon-64.png" />
+    <link rel="apple-touch-icon" href="${pre}assets/apple-touch-icon.png" />
     <link rel="stylesheet" href="${pre}styles.css" />
   </head>
   <body data-title-ko="${esc(titleKo)}" data-title-en="${esc(titleEn)}" data-desc-ko="${esc(descKo)}" data-desc-en="${esc(descEn)}">${header(pre)}
