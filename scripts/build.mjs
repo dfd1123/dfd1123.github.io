@@ -250,6 +250,23 @@ write('ai/projects/index.html', page({
     </main>`,
 }));
 
+// ---- home page: AI teaser between markers
+{
+  const latest = ai.thoughts[ai.thoughts.length - 1];
+  const block = latest ? `
+        <div class="ai-teaser-head">
+          <h2>${bi('AI에 대한 생각은 계속 바뀐다.', 'My take on AI keeps changing.')}</h2>
+          <a class="ai-teaser-all" href="ai/index.html">${bi('AI 페이지 보기 →', 'Visit the AI page →')}</a>
+        </div>
+        <blockquote class="ai-teaser-quote">
+          <time>${esc(latest.date)}</time>
+          <p>${bi(esc(latest.ko), esc(latest.en))}</p>
+        </blockquote>` : '';
+  const S = '<!-- AI:START -->', E = '<!-- AI:END -->';
+  let h = preview ? readFileSync(join(out, 'index.html'), 'utf8') : read('index.html');
+  if (h.includes(S)) { h = h.replace(new RegExp(`${S}[\\s\\S]*?${E}`), `${S}${block}\n        ${E}`); write('index.html', h); }
+}
+
 // ---- RSS
 const items = [...published].reverse().map((p) => `
     <item>
