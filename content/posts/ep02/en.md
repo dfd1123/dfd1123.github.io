@@ -32,6 +32,8 @@ But software that ties many robots together isn't something one person builds. M
 
 ## Rules are uncomfortable. That's why you need them
 
+Think of a shared kitchen. If you live alone, it doesn't matter where the knives are — you know. But in a kitchen many people use, the knives go where the knives go, and the spices go where the spices go. It's annoying at first. Without those rules, though, the kitchen grinds to a halt the moment everyone starts cooking. Code works the same way.
+
 Separate shared packages from service logic, and your teammates get rules and standards to follow — what goes where, what to reuse, what not to rebuild. The tighter the rules, the more uncomfortable it feels. If you just want to ship one screen fast, those walls look like obstacles.
 
 But over the long run, that discomfort is what lets a team **move like a single body**. Whether you use AI or not.
