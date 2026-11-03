@@ -270,6 +270,6 @@ a.writing-item { color: inherit; }
 .wordmark { display: inline-flex; align-items: center; gap: 12px; letter-spacing: -.02em; }
 .wordmark img { display: block; width: 48px; height: 48px; border-radius: 50%; transition: transform .2s; }
 .wordmark:hover img { transform: rotate(-6deg) scale(1.05); }
-.wordmark-name { font-size: 1.02rem; font-weight: 700; }
+.wordmark .wordmark-name { color: var(--paper-bright); font-size: 1.02rem; font-weight: 700; }
 .wordmark-name small { margin-left: 4px; color: var(--lime); font: 500 .74rem var(--mono); letter-spacing: 0; }
 @media (max-width: 620px) { .wordmark img { width: 40px; height: 40px; } .wordmark-name small { display: none; } }
